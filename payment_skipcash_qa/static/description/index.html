@@ -3,7 +3,7 @@
         .oe_container {
             max-width: 1000px;
             margin: auto;
-            padding: 2rem 0;
+            padding: 2rem 15px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: #333;
         }
@@ -13,10 +13,13 @@
         }
         .cover-image-wrapper img {
             max-width: 100%;
+            height: auto;
             border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
         .oe_title {
             margin-bottom: 2rem;
+            padding: 0 15px;
         }
         .oe_title h1 {
             font-weight: 700;
@@ -75,19 +78,31 @@
         }
     </style>
 
-    <div class="cover-image-wrapper">
-        <img src="skipcash_cover_image.png" alt="SkipCash Payment Gateway for Odoo">
+    <div class="row">
+        <div class="col-12">
+            <div class="cover-image-wrapper">
+                <img src="skipcash_cover_image.png" alt="SkipCash Payment Gateway for Odoo">
+            </div>
+        </div>
     </div>
 
-    <div class="oe_title">
-        <h1>SkipCash Payment Gateway for Odoo 19</h1>
-        <h3>Seamlessly integrate Qatar's leading payment gateway with your Odoo eCommerce and Invoicing.</h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="oe_title">
+                <h1>SkipCash Payment Gateway for Odoo 19</h1>
+                <h3>Seamlessly integrate Qatar's leading payment gateway with your Odoo eCommerce and Invoicing.</h3>
+            </div>
+        </div>
     </div>
 
-    <div class="prerequisites-box">
-        <h5>Prerequisites</h5>
-        <p>Before installing this module, you must install the official SkipCash Python library in your Odoo environment.<br>
-        <code>pip install skipcash</code></p>
+    <div class="row">
+        <div class="col-12">
+            <div class="prerequisites-box">
+                <h5>Prerequisites</h5>
+                <p>Before installing this module, you must install the official SkipCash Python library in your Odoo environment.<br>
+                <code>pip install skipcash</code></p>
+            </div>
+        </div>
     </div>
 
     <div class="row" style="margin-bottom: 4rem;">
@@ -113,7 +128,11 @@
         </div>
     </div>
 
-    <h3 class="text-center content-heading" style="font-size: 1.5rem; margin-bottom: 2rem;">How to Configure</h3>
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center content-heading" style="font-size: 1.5rem; margin-bottom: 2rem;">How to Configure</h3>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-6" style="padding-right: 2rem;">
             <h4 class="content-heading">1. In Odoo</h4>

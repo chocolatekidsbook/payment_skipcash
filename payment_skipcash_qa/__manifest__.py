@@ -22,4 +22,8 @@
     'external_dependencies': {
         "python": ["skipcash"],
     },
+    'images': [
+        'static/description/skipcash_cover_image.png',
+    ],
+
 }

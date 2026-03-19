@@ -1,168 +1,147 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SkipCash Payment Gateway Integration for Odoo</title>
-    <!-- Include Bootstrap for previewing if needed, though Odoo app store provides it -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<section class="oe_container">
     <style>
         .oe_container {
             max-width: 1000px;
             margin: auto;
             padding: 2rem 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+        }
+        .cover-image-wrapper {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .cover-image-wrapper img {
+            max-width: 100%;
+            border-radius: 8px;
         }
         .oe_title {
-            text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         .oe_title h1 {
             font-weight: 700;
-            color: #2b2b2b;
-            margin-bottom: 1rem;
+            color: #212529;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
         }
         .oe_title h3 {
-            font-weight: 300;
-            color: #666;
+            font-weight: 400;
+            color: #212529;
+            font-size: 1.5rem;
+            line-height: 1.4;
         }
-        .feature-block {
-            padding: 2rem;
-            margin-bottom: 2rem;
-            background: #f8f9fa;
+        .prerequisites-box {
+            background-color: #dcf2f2;
+            padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 4rem;
         }
-        .feature-block h4 {
-            color: #017e84; /* Odoo primary color or brand color */
+        .prerequisites-box h5 {
+            color: #004d40;
             font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .prerequisites-box p {
+            color: #549b9b;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        .content-heading {
+            font-weight: 600;
+            color: #212529;
             margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        .text-muted-custom {
+            color: #6c757d;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
         .feature-list {
-            list-style-type: none;
-            padding-left: 0;
+            padding-left: 1.2rem;
         }
         .feature-list li {
-            margin-bottom: 0.75rem;
-            position: relative;
-            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
         }
-        .feature-list li::before {
-            content: "✓";
-            color: #28a745;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        .screenshot-container img {
-            max-width: 100%;
-            border-radius: 6px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin: 1rem 0;
-            border: 1px solid #eee;
-        }
-        .support-block {
-            text-align: center;
-            padding: 2rem;
-            background: #e9ecef;
-            border-radius: 8px;
-            margin-top: 3rem;
-        }
-        .code-block {
-            background-color: #2d2d2d;
-            color: #f8f8f2;
-            padding: 1rem;
+        .code-inline {
+            background-color: #f4f5f7;
+            padding: 0.2rem 0.5rem;
             border-radius: 4px;
+            color: #212529;
+            font-weight: 600;
+            font-size: 0.85rem;
             font-family: monospace;
-            margin-bottom: 1rem;
         }
     </style>
-</head>
-<body>
 
-<section class="oe_container">
+    <div class="cover-image-wrapper">
+        <img src="skipcash_cover_image.png" alt="SkipCash Payment Gateway for Odoo">
+    </div>
+
     <div class="oe_title">
         <h1>SkipCash Payment Gateway for Odoo 19</h1>
         <h3>Seamlessly integrate Qatar's leading payment gateway with your Odoo eCommerce and Invoicing.</h3>
     </div>
 
+    <div class="prerequisites-box">
+        <h5>Prerequisites</h5>
+        <p>Before installing this module, you must install the official SkipCash Python library in your Odoo environment.<br>
+        <code>pip install skipcash</code></p>
+    </div>
+
+    <div class="row" style="margin-bottom: 4rem;">
+        <div class="col-md-6" style="padding-right: 2rem;">
+            <h4 class="content-heading">Empower Your Business in Qatar</h4>
+            <p class="text-muted-custom">
+                SkipCash is a state-of-the-art mobile payment app and gateway operating in Qatar. This module provides a secure, robust, and native integration between your Odoo 19 environment and the SkipCash platform.
+            </p>
+            <p class="text-muted-custom">
+                Whether you are selling products online through Odoo eCommerce or sending invoices to clients, this module allows them to pay instantly using their credit cards, debit cards, or the SkipCash app.
+            </p>
+        </div>
+        <div class="col-md-6">
+             <h4 class="content-heading">Key Features</h4>
+             <ul class="text-muted-custom feature-list">
+                <li><strong>Direct Integration:</strong> Connects directly to SkipCash API using secure Webhooks.</li>
+                <li><strong>eCommerce Ready:</strong> Customers can checkout securely from your Odoo web store.</li>
+                <li><strong>Invoice Payments:</strong> Add a "Pay Now" button to invoices for quick settlements.</li>
+                <li><strong>Tokenization Support:</strong> Allows saving cards securely for future one-click payments.</li>
+                <li><strong>Automated Status Updates:</strong> Background Webhooks ensure Odoo always knows if a payment succeeded or failed, even if the user closes their browser.</li>
+                <li><strong>Multi-Currency:</strong> Full support for QAR (Qatari Riyal).</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="text-center content-heading" style="font-size: 1.5rem; margin-bottom: 2rem;">How to Configure</h3>
     <div class="row">
-        <div class="col-12">
-            <div class="alert alert-info">
-                <h5 class="alert-heading">Prerequisites</h5>
-                <p>Before installing this module, you must install the official SkipCash Python library in your Odoo environment.</p>
-                <div class="code-block">pip install skipcash</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row align-items-center mb-5 mt-5">
-        <div class="col-md-6">
-            <div class="feature-block h-100 mb-0">
-                <h4>Empower Your Business in Qatar</h4>
-                <p class="text-justify">
-                    SkipCash is a state-of-the-art mobile payment app and gateway operating in Qatar.
-                    This module provides a secure, robust, and native integration between your Odoo 19 environment and the SkipCash platform.
-                </p>
-                <p>
-                    Whether you are selling products online through Odoo eCommerce or sending invoices to clients, this module allows them to pay instantly using their credit cards, debit cards, or the SkipCash app.
-                </p>
-            </div>
+        <div class="col-md-6" style="padding-right: 2rem;">
+            <h4 class="content-heading">1. In Odoo</h4>
+            <ol class="text-muted-custom feature-list">
+                <li>Go to Accounting / Website > Configuration > Payment Providers.</li>
+                <li>Select <strong>SkipCash</strong>.</li>
+                <li>Enter your credentials:
+                    <ul style="padding-left: 1.2rem; margin-top: 0.5rem;">
+                        <li>Client ID</li>
+                        <li>Key ID</li>
+                        <li>Secret Key</li>
+                        <li>Webhook Key</li>
+                    </ul>
+                </li>
+                <li>Set state to <strong>Test</strong> (Sandbox) or <strong>Enabled</strong> (Production).</li>
+            </ol>
         </div>
         <div class="col-md-6">
-             <div class="feature-block h-100 mb-0">
-                <h4>Key Features</h4>
-                <ul class="feature-list">
-                    <li><strong>Direct Integration:</strong> Connects directly to SkipCash API using secure Webhooks.</li>
-                    <li><strong>eCommerce Ready:</strong> Customers can checkout securely from your Odoo web store.</li>
-                    <li><strong>Invoice Payments:</strong> Add a "Pay Now" button to invoices for quick settlements.</li>
-                    <li><strong>Tokenization Support:</strong> Allows saving cards securely for future one-click payments.</li>
-                    <li><strong>Automated Status Updates:</strong> Background Webhooks ensure Odoo always knows if a payment succeeded or failed, even if the user closes their browser.</li>
-                    <li><strong>Multi-Currency:</strong> Full support for QAR (Qatari Riyal).</li>
-                </ul>
-            </div>
+            <h4 class="content-heading">2. In SkipCash Portal</h4>
+            <p class="text-muted-custom">Register your Webhook and Return URLs in the SkipCash Merchant Portal so it knows where to send payment updates.</p>
+            <p class="text-muted-custom" style="margin-bottom: 1rem;">
+                Webhook URL:<br>
+                <span class="code-inline">https://your-domain.com/payment/skipcash/webhook</span>
+            </p>
+            <p class="text-muted-custom">
+                Return URL:<br>
+                <span class="code-inline">https://your-domain.com/payment/skipcash/return</span>
+            </p>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-12">
-            <h3 class="text-center mb-4 font-weight-bold">How to Configure</h3>
-        </div>
-        <div class="col-md-6">
-            <div class="feature-block">
-                <h4>1. In Odoo</h4>
-                <ol>
-                    <li>Go to <strong>Accounting / Website &gt; Configuration &gt; Payment Providers</strong>.</li>
-                    <li>Select <strong>SkipCash</strong>.</li>
-                    <li>Enter your credentials:
-                        <ul>
-                            <li>Client ID</li>
-                            <li>Key ID</li>
-                            <li>Secret Key</li>
-                            <li>Webhook Key</li>
-                        </ul>
-                    </li>
-                    <li>Set state to <strong>Test</strong> (Sandbox) or <strong>Enabled</strong> (Production).</li>
-                </ol>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="feature-block">
-                <h4>2. In SkipCash Portal</h4>
-                <p>Register your Webhook and Return URLs in the SkipCash Merchant Portal so it knows where to send payment updates.</p>
-                <p><strong>Webhook URL:</strong><br><code>https://your-domain.com/payment/skipcash/webhook</code></p>
-                <p><strong>Return URL:</strong><br><code>https://your-domain.com/payment/skipcash/return</code></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="support-block">
-        <h3 class="mb-3">Need Help or Customization?</h3>
-        <p>If you face any issues during the installation, or if you need to customize this module for your specific business needs, we are here to help.</p>
-        <p class="font-weight-bold">Contact us for professional Odoo development and support services.</p>
-    </div>
-
 </section>
-
-</body>
-</html>
